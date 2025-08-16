@@ -1,0 +1,28 @@
+
+Reusability:
+
+------------------------------------------------------------------------------------
+Workbox setup is a reusable template. Copy it to any static app and it’ll work the same as long as the paths and scope match.
+
+What to keep the same
+
+Put sw.js next to index.html of that app (the SW’s scope is its folder and below).
+
+Keep sw-register.js loading ./sw.js.
+
+Use relative URLs (./...) in:
+
+index.html (manifest, icons, sw-register)
+
+manifest.webmanifest (icons, start_url: ".")
+
+Leave HTML/CSS/JS off the precache (we’re using NetworkFirst for instant updates).
+
+-----------------------------------------------------------------------------------
+Changegments for each app:
+
+manifest.webmanifest: name, theme, icons.
+
+offline.html: wording/design.
+
+Any extra assets in the precache list (only stable files like icons/manifest/offline page).

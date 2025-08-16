@@ -1,0 +1,14 @@
+
+{
+  "_comment": "A manifest.json file, also known as a web app manifest, is a JSON file used to provide information about a web application, particularly for Progressive Web Apps (PWAs), browser extensions, and other web platforms. It essentially acts as a configuration file that tells the browser how to handle and display the application. ",
+  "name": "Your App",
+  "short_name": "YourApp",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    { "src": "circle.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "cross.png",  "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
