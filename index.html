@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 1.5rem;
+            font-size: clamp(1.5rem, 1.0510204081632653rem + 2.0408163265306123vw, 3.5rem);
+        }
+        #gamediv{
+            margin: 0 auto;
+            display: grid;
+            width: 80%;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (min-width: 1000px) {
+            #gamediv{
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            #gamediv{
+                width: 30%;
+            }
+        }
+
+        .cell{
+            width: 100%;
+            aspect-ratio: 1 / 1;  /* height will match width */
+            border: 2px solid black;
+            background-color: bisque;
+            display: grid;
+            place-items: center; /* centers the image */
+        }
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+    </style>
+    
+    <!--notice that defer only works for external scipts but no for inline scripts!-->
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <h1>Infinite Tic Tac Toe</h1>
+    <div id="gamediv">
+        <div id="0.0" class="cell"></div>
+        <div id="0.1" class="cell"></div>
+        <div id="0.2" class="cell"></div>
+        <div id="1.0" class="cell"></div>
+        <div id="1.1" class="cell"></div>
+        <div id="1.2" class="cell"></div>
+        <div id="2.0" class="cell"></div>
+        <div id="2.1" class="cell"></div>
+        <div id="2.2" class="cell"></div>
+
+    </div>
+
+    
+    
+</body>
+</html>
